@@ -1,44 +1,42 @@
 <template>
-  <div class="home">
+  <div class="comment">
+    comment
+    <button @click="goBaseInfo()">go baseInfo</button>
     <button @click="goCart()">go cart</button>
     <button @click="goCategory()">go category</button>
-    <button @click="goComment()">go comment</button>
-    <button @click="goGoodsList()">go goodsList</button>
-    <button @click="goGoodsDetail()">go goodsDetail</button>
-    <button @click="goRegister()">go register</button>
+    <button @click="goCollection()">go collection</button>
+    <button @click="goHome()">go home</button>
     <button @click="goLogin()">go login</button>
     <button @click="goMessage()">go message</button>
-    <button @click="goOrderList()">go orderList</button>
+    <button @click="goSetting()">go setting</button>
     <button @click="goUser()">go user</button>
+    <button @click="goGoodsDetail()">go goodsDetail</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "home",
+  name: "comment",
   data() {
     return {};
   },
   components: {},
   mounted() {},
   methods: {
+    goBaseInfo() {
+      this.$router.push("/baseInfo");
+    },
     goCart() {
       this.$router.push("/cart");
     },
     goCategory() {
       this.$router.push("/category");
     },
-    goComment() {
-      this.$router.push("/comment");
+    goCollection() {
+      this.$router.push("/collection");
     },
-    goGoodsList() {
-      this.$router.push("/goodsList");
-    },
-    goGoodsDetail() {
-      this.$router.push("/goodsDetail");
-    },
-    goRegister() {
-      this.$router.push("/register");
+    goHome() {
+      this.$router.push("/home");
     },
     goLogin() {
       this.$router.push("/login");
@@ -46,11 +44,14 @@ export default {
     goMessage() {
       this.$router.push("/message");
     },
-    goOrderList() {
-      this.$router.push("/orderList");
+    goSetting() {
+      this.$router.push("/setting");
     },
     goUser() {
       this.$router.push("/user");
+    },
+    goGoodsDetail() {
+      this.$router.push("/goodsDetail");
     }
   }
 };

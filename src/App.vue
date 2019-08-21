@@ -11,19 +11,19 @@ import ajax from "./utils/ajax.js";
 export default {
   name: "app",
   components: {},
-  mounted() {
+  mounted () {
     ajax.get("/cms/category/list").then(res => {
-      console.log(res);
+      console.log(res)
     });
   },
   methods: {
-    changeLang() {
+    changeLang () {
       if (this.$i18n.locale == "en") {
-        this.$i18n.locale = "zh";
+        this.$i18n.locale = "zh"
       } else {
-        this.$i18n.locale = "en";
+        this.$i18n.locale = "en"
       }
-      console.log(this.$t("a"));
+      console.log(this.$t("a"))
     }
   }
 };
