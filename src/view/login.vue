@@ -1,6 +1,8 @@
 <template>
   <div class="login">
+    login
     <button @click="goRegister()">go register</button>
+    <button @click="goModifyPwd()">go modifyPwd</button>
     <button @click="goHome()">go home</button>
   </div>
 </template>
@@ -17,8 +19,11 @@ export default {
     goRegister() {
       this.$router.push("/register");
     },
+    goModifyPwd() {
+      this.$router.push("/modifyPwd");
+    },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     }
   }
 };

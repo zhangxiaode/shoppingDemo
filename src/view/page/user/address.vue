@@ -9,7 +9,6 @@
     <button @click="goLogin()">go login</button>
     <button @click="goMessage()">go message</button>
     <button @click="goSetting()">go setting</button>
-    <button @click="goUser()">go user</button>
   </div>
 </template>
 
@@ -23,31 +22,28 @@ export default {
   mounted() {},
   methods: {
     goBaseInfo() {
-      this.$router.push("/baseInfo");
+      this.$router.push("/page/user/baseInfo");
     },
     goCart() {
-      this.$router.push("/cart");
+      this.$router.push("/page/cart");
     },
     goCategory() {
-      this.$router.push("/category");
+      this.$router.push("/page/category");
     },
     goCollection() {
-      this.$router.push("/collection");
+      this.$router.push("/page/collection");
     },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     },
     goLogin() {
       this.$router.push("/login");
     },
     goMessage() {
-      this.$router.push("/message");
+      this.$router.push("/page/message");
     },
     goSetting() {
-      this.$router.push("/setting");
-    },
-    goUser() {
-      this.$router.push("/user");
+      this.$router.push("/page/user/setting");
     }
   }
 };

@@ -24,19 +24,19 @@ export default {
   mounted() {},
   methods: {
     goCart() {
-      this.$router.push("/cart");
+      this.$router.push("/page/cart");
     },
     goCategory() {
-      this.$router.push("/category");
+      this.$router.push("/page/category");
     },
     goComment() {
-      this.$router.push("/comment");
+      this.$router.push("/page/comment");
     },
     goGoodsList() {
-      this.$router.push("/goodsList");
+      this.$router.push("/page/goodsList");
     },
     goGoodsDetail() {
-      this.$router.push("/goodsDetail");
+      this.$router.push("/page/goodsDetail");
     },
     goRegister() {
       this.$router.push("/register");
@@ -45,13 +45,13 @@ export default {
       this.$router.push("/login");
     },
     goMessage() {
-      this.$router.push("/message");
+      this.$router.push("/page/message");
     },
     goOrderList() {
-      this.$router.push("/orderList");
+      this.$router.push("/page/orderList");
     },
     goUser() {
-      this.$router.push("/user");
+      this.$router.push("/page/user");
     }
   }
 };

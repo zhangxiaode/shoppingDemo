@@ -21,25 +21,25 @@ export default {
   mounted() {},
   methods: {
     goCart() {
-      this.$router.push("/cart");
+      this.$router.push("/page/cart");
     },
     goCategory() {
-      this.$router.push("/category");
+      this.$router.push("/page/category");
     },
     goCollection() {
-      this.$router.push("/collection");
+      this.$router.push("/page/collection");
     },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     },
     goLogin() {
       this.$router.push("/login");
     },
     goMessage() {
-      this.$router.push("/message");
+      this.$router.push("/page/message");
     },
     goOrderList() {
-      this.$router.push("/orderList");
+      this.$router.push("/page/orderList");
     }
   }
 };

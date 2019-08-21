@@ -23,31 +23,31 @@ export default {
   mounted() {},
   methods: {
     goLogistics() {
-      this.$router.push("/logistics");
+      this.$router.push("/page/logistics");
     },
     goOrderDetail() {
-      this.$router.push("/orderDetail");
+      this.$router.push("/page/orderDetail");
     },
     goCart() {
-      this.$router.push("/cart");
+      this.$router.push("/page/cart");
     },
     goCategory() {
-      this.$router.push("/category");
+      this.$router.push("/page/category");
     },
     goCollection() {
-      this.$router.push("/collection");
+      this.$router.push("/page/collection");
     },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     },
     goLogin() {
       this.$router.push("/login");
     },
     goMessage() {
-      this.$router.push("/message");
+      this.$router.push("/page/message");
     },
     goGoodsDetail() {
-      this.$router.push("/goodsDetail");
+      this.$router.push("/page/goodsDetail");
     }
   }
 };

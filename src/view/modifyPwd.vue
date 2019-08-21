@@ -23,7 +23,7 @@ export default {
       this.$router.push("/login");
     },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     }
   }
 };

@@ -22,28 +22,28 @@ export default {
   mounted() {},
   methods: {
     goPayment() {
-      this.$router.push("/payment");
+      this.$router.push("/page/payment");
     },
     goAddress() {
-      this.$router.push("/address");
+      this.$router.push("/page/user/address");
     },
     goCart() {
-      this.$router.push("/cart");
+      this.$router.push("/page/cart");
     },
     goCategory() {
-      this.$router.push("/category");
+      this.$router.push("/page/category");
     },
     goCollection() {
-      this.$router.push("/collection");
+      this.$router.push("/page/collection");
     },
     goHome() {
-      this.$router.push("/home");
+      this.$router.push("/page/home");
     },
     goLogin() {
       this.$router.push("/login");
     },
     goMessage() {
-      this.$router.push("/message");
+      this.$router.push("/page/message");
     }
   }
 };

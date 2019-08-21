@@ -2,6 +2,8 @@
   <div class="pageTop">
     <div class="topCont">
       <div class="topLeft">
+        <!-- <span @click="changeLang()">切换语言</span>
+        {{$t("a")}}-->
         <a href="javascript:;" @click="goHome()">首页</a>
         <a href="javascript:;" @click="goMessage()">我的消息</a>
       </div>
@@ -43,6 +45,14 @@ export default {
     goLogin() {
       this.$router.push("/login");
     }
+    // changeLang() {
+    //   if (this.$i18n.locale == "en") {
+    //     this.$i18n.locale = "zh";
+    //   } else {
+    //     this.$i18n.locale = "en";
+    //   }
+    //   console.log(this.$t("a"));
+    // }
   }
 };
 </script>
