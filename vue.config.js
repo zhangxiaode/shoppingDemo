@@ -9,7 +9,7 @@ module.exports = {
     config.resolve.alias.set('@', resolve('src'))
   },
   publicPath: '/',
-  assetsDir: '/',
+  assetsDir: './',
   filenameHashing: true,
   lintOnSave: process.env.NODE_ENV !== 'production',
   productionSourceMap: false,

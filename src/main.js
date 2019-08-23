@@ -4,13 +4,15 @@ import router from './router/index'
 import store from './store/index'
 import ajax from './utils/ajax'
 
+import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
 
 import './style/reset.less'
 import './style/common.less'
+import 'element-ui/lib/theme-chalk/index.css'
 
+Vue.use(ElementUI)
 Vue.use(VueI18n)
-
 // 以下为语言包单独设置的场景，单独设置时语言包需单独引入
 
 const messages = {

@@ -5,19 +5,16 @@
 </template>
 
 <script>
-import ajax from "./utils/ajax.js";
 export default {
   name: "app",
-  components: { },
-  mounted() {
-    ajax.get("/cms/category/list").then(res => {
-      console.log(res);
-    });
-  },
-  methods: {
-  }
+  components: {},
+  mounted() {},
+  methods: {}
 };
 </script>
 
 <style scoped lang='less'>
+#app {
+  height: 100%;
+}
 </style>
