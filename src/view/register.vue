@@ -3,34 +3,51 @@
     <el-form
       class="registerForm"
       status-icon
-      label-width="80px"
       ref="registerForm"
       :model="registerForm"
       :rules="registerRules"
     >
       <div class="logo">这里是logo</div>
-      <el-form-item class="formItem" label="用户名" prop="username">
-        <el-input v-model="registerForm.username" placeholder="请输入登录用户名" auto-complete="off"></el-input>
+      <el-steps :active="active" align-center>
+        <el-step title="用户注册"></el-step>
+        <el-step title="手机验证"></el-step>
+      </el-steps>
+      <el-form-item v-if="active == 0" class="formItem" prop="username">
+        <el-input v-model="registerForm.username" placeholder="用户名" auto-complete="off"></el-input>
       </el-form-item>
-      <el-form-item class="formItem" label="密码" prop="password">
+      <el-form-item v-if="active == 0" class="formItem" prop="password">
         <el-input
           type="password"
           v-model="registerForm.password"
-          placeholder="请输入登录密码"
+          placeholder="密码"
           auto-complete="off"
         ></el-input>
       </el-form-item>
-      <el-form-item class="formItem" label="确认密码" prop="password">
+      <el-form-item v-if="active == 0" class="formItem" prop="password">
         <el-input
           type="password"
           v-model="registerForm.password"
-          placeholder="请重新输入登录密码"
+          placeholder="确认密码"
           auto-complete="off"
         ></el-input>
+      </el-form-item>
+
+      <el-form-item v-if="active == 1" class="formItem" prop="username">
+        <el-input v-model="registerForm.username" placeholder="手机号" auto-complete="off"></el-input>
+        <img src alt />
+      </el-form-item>
+      <el-form-item v-if="active == 1" class="formItem" prop="username">
+        <el-input v-model="registerForm.username" placeholder="验证码" auto-complete="off"></el-input>
+      </el-form-item>
+      <el-form-item v-if="active == 1" class="formItem" prop="username">
+        <el-input v-model="registerForm.username" placeholder="短信验证码" auto-complete="off"></el-input>
+        <span>发送</span>
       </el-form-item>
       <el-form-item label-width="0" class="registerBtns">
-        <el-button @click="goLogin()">登录</el-button>
-        <el-button type="primary" @click="handleRegister()">注册</el-button>
+        <el-button v-if="active == 0" @click="goNext()">下一步</el-button>
+        <el-button v-if="active == 1" @click="goPrev()">上一步</el-button>
+        <el-button v-if="active == 1" @click="goLogin()">登录</el-button>
+        <el-button v-if="active == 1" type="primary" @click="handleRegister()">注册</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -41,6 +58,7 @@ export default {
   name: "register",
   data() {
     return {
+      active: 0,
       registerForm: {
         username: "",
         password: "",
@@ -80,6 +98,12 @@ export default {
   components: {},
   mounted() {},
   methods: {
+    goNext() {
+      if (this.active < 1) this.active++;
+    },
+    goPrev() {
+      if (this.active > 0) this.active--;
+    },
     handleRegister() {
       this.$refs.registerForm.validate(valid => {
         if (valid) {
@@ -107,10 +131,10 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
+    width: 300px;
     height: 400px;
     margin-top: -200px;
-    margin-left: -250px;
+    margin-left: -150px;
     .logo {
       font-size: 36px;
       color: #ccc;
